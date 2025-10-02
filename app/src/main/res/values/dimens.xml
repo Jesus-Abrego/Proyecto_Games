@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_width">70dp</dimen>
+    <dimen name="card_height">100dp</dimen>
+    <dimen name="card_overlap_tableau">25dp</dimen> <!-- Superposición vertical de cartas en el tableau -->
+</resources>

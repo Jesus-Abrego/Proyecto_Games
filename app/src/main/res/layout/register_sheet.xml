@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#202020">
+
+    <TextView
+        android:id="@+id/tvRegTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear cuenta"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:paddingBottom="6dp" />
+
+    <!-- Usuario (único) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario"
+        app:boxBackgroundColor="#222222"
+        app:boxStrokeColor="#FF6A00"
+        app:startIconDrawable="@android:drawable/ic_menu_edit"
+        app:startIconTint="#FF6A00">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/white"
+            android:textColorHint="#B3FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Nombre para mostrar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Nombre para mostrar"
+        app:boxBackgroundColor="#222222"
+        app:boxStrokeColor="#FF6A00"
+        app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+        app:startIconTint="#FF6A00">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegDisplayName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/white"
+            android:textColorHint="#B3FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Correo -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Correo"
+        app:boxBackgroundColor="#222222"
+        app:boxStrokeColor="#FF6A00"
+        app:startIconDrawable="@android:drawable/ic_dialog_email"
+        app:startIconTint="#FF6A00">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/white"
+            android:textColorHint="#B3FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Teléfono -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Teléfono"
+        app:boxBackgroundColor="#222222"
+        app:boxStrokeColor="#FF6A00"
+        app:startIconDrawable="@android:drawable/ic_menu_call"
+        app:startIconTint="#FF6A00">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:textColor="@android:color/white"
+            android:textColorHint="#B3FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Género -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Género"
+        android:textColor="#DDFFFFFF" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hombre"
+            android:textColor="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mujer"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="12dp" />
+
+        <RadioButton
+            android:id="@+id/rbOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No especifico"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="12dp" />
+    </RadioGroup>
+
+    <!-- Password + Confirmación -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Contraseña"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#FF6A00"
+        app:boxBackgroundColor="#222222"
+        app:boxStrokeColor="#FF6A00">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@android:color/white"
+            android:textColorHint="#B3FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Confirmar contraseña"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#FF6A00"
+        app:boxBackgroundColor="#222222"
+        app:boxStrokeColor="#FF6A00">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegPass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@android:color/white"
+            android:textColorHint="#B3FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDoRegister"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="14dp"
+        android:text="Crear cuenta"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:cornerRadius="24dp"
+        app:backgroundTint="#FF6A00" />
+
+</LinearLayout>

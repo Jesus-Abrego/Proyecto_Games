@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#8000FF00" /> <!-- Verde semi-transparente -->
+    <stroke
+        android:width="2dp"
+        android:color="#FF00AA00" /> <!-- Un verde un poco más oscuro y opaco para el borde -->
+    <corners android:radius="4dp" />
+</shape>

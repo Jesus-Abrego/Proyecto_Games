@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".blackjack.Blackjack_Activity"
+    android:background="#0D6B3E">
+
+    <!-- Rim sutil interior -->
+    <View
+        android:id="@+id/tableRim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        android:background="#165E3A"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ====== GUIDELINES (con width/height) ====== -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gTitleBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gDealerTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gDealerBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gInfoTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gInfoBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.54" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gBetSpotTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.56" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gBetSpotBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gPlayerTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gPlayerBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gButtonsBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <!-- ====== CABECERA ====== -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/gTop"
+        app:layout_constraintBottom_toTopOf="@id/gTitleBottom"
+        app:layout_constraintStart_toStartOf="@id/tableRim"
+        app:layout_constraintEnd_toEndOf="@id/tableRim">
+
+        <!-- Bandeja decorativa -->
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="26dp"
+            android:background="#BFBFBF"
+            android:padding="3dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="#CF2F2F"/>
+            <View android:layout_width="6dp" android:layout_height="match_parent"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="#2E63D4"/>
+            <View android:layout_width="6dp" android:layout_height="match_parent"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="#EFEFEF"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BLACKJACK"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:letterSpacing="0.08" />
+
+        <TextView
+            android:id="@+id/tvPays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BLACKJACK PAYS 3 TO 2"
+            android:textSize="12sp"
+            android:textColor="#F7DE86"
+            android:layout_marginTop="4dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="6dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PAYS 2 TO 1" android:textStyle="bold" android:textSize="12sp" android:textColor="#F7DE86" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:background="#245C3A"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  INSURANCE  " android:textStyle="bold" android:textSize="12sp" android:textColor="#FFFFFF" android:paddingHorizontal="12dp" android:paddingVertical="4dp" android:layout_marginHorizontal="10dp" android:background="#B63E2E"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PAYS 2 TO 1" android:textStyle="bold" android:textSize="12sp" android:textColor="#F7DE86" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:background="#245C3A"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEALER MUST DRAW TO 16 AND STAND ON ALL 17s"
+            android:textSize="11sp"
+            android:textColor="#E8F0CF"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- ====== MANO DEL DEALER ====== -->
+    <LinearLayout
+        android:id="@+id/dealerHand"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="6dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/gDealerTop"
+        app:layout_constraintBottom_toBottomOf="@id/gDealerBottom"
+        app:layout_constraintStart_toStartOf="@id/tableRim"
+        app:layout_constraintEnd_toEndOf="@id/tableRim" />
+
+    <!-- Contador visible junto a la mano del dealer -->
+    <TextView
+        android:id="@+id/tvDealerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:shadowColor="#99000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="4"
+        app:layout_constraintTop_toTopOf="@id/dealerHand"
+        app:layout_constraintEnd_toEndOf="@id/dealerHand"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="6dp" />
+
+    <!-- ====== INFO / CONTROL DE APUESTA ====== -->
+    <LinearLayout
+        android:id="@+id/playerInfoBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="2dp"
+        app:layout_constraintTop_toTopOf="@id/gInfoTop"
+        app:layout_constraintBottom_toBottomOf="@id/gInfoBottom"
+        app:layout_constraintStart_toStartOf="@id/tableRim"
+        app:layout_constraintEnd_toEndOf="@id/tableRim">
+
+        <!-- Balance -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BALANCE" android:textColor="#D5FFE6" android:textSize="11sp"/>
+            <TextView android:id="@+id/tvBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20,000" android:textStyle="bold" android:textColor="#FFFFFF" android:textSize="18sp"/>
+        </LinearLayout>
+
+        <!-- Control apuesta -->
+        <LinearLayout
+            android:id="@+id/betControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/btnBetMinus" android:layout_width="44dp" android:layout_height="44dp" android:text="−" android:textStyle="bold" android:textSize="20sp" android:textColor="#000000" android:gravity="center" android:background="#E6CF3A"/>
+            <LinearLayout android:layout_width="120dp" android:layout_height="44dp" android:orientation="vertical" android:gravity="center" android:layout_marginHorizontal="8dp" android:background="#165E3A">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BET" android:textColor="#F7DE86" android:textSize="11sp"/>
+                <TextView android:id="@+id/tvBet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1,000" android:textStyle="bold" android:textColor="#FFFFFF" android:textSize="18sp"/>
+            </LinearLayout>
+            <TextView android:id="@+id/btnBetPlus" android:layout_width="44dp" android:layout_height="44dp" android:text="+" android:textStyle="bold" android:textSize="20sp" android:textColor="#000000" android:gravity="center" android:background="#E6CF3A"/>
+        </LinearLayout>
+
+        <!-- En juego -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IN PLAY" android:textColor="#D5FFE6" android:textSize="11sp"/>
+            <TextView android:id="@+id/tvInPlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textStyle="bold" android:textColor="#FFFFFF" android:textSize="18sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ====== SPOT DE APUESTA + FICHAS MEJORADAS ====== -->
+    <LinearLayout
+        android:id="@+id/betSpot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/gBetSpotTop"
+        app:layout_constraintBottom_toBottomOf="@id/gBetSpotBottom"
+        app:layout_constraintStart_toStartOf="@id/tableRim"
+        app:layout_constraintEnd_toEndOf="@id/tableRim">
+
+        <!-- anillo del spot -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="◎"
+            android:textSize="98sp"
+            android:textColor="#EAF6ED" />
+
+        <!-- Fichas con aro + centro + valor -->
+        <FrameLayout
+            android:id="@+id/chipsOnBet"
+            android:layout_width="120dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="-64dp">
+
+            <!-- CHIP ROJO -->
+            <FrameLayout
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="2dp">
+                <!-- aro -->
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="◯" android:textSize="56sp" android:textColor="#FFFFFF" android:gravity="center" android:shadowColor="#55000000" android:shadowDx="0" android:shadowDy="2" android:shadowRadius="3"/>
+                <!-- centro -->
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="●" android:textSize="44sp" android:textColor="#CF2F2F" android:gravity="center"/>
+                <!-- valor -->
+                <TextView android:id="@+id/lblChip1" android:layout_width="match_parent" android:layout_height="match_parent" android:text="1k" android:textSize="12sp" android:textStyle="bold" android:textColor="#FFFFFF" android:gravity="center"/>
+            </FrameLayout>
+
+            <!-- CHIP AZUL -->
+            <FrameLayout
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center">
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="◯" android:textSize="56sp" android:textColor="#FFFFFF" android:gravity="center" android:shadowColor="#55000000" android:shadowDx="0" android:shadowDy="2" android:shadowRadius="3"/>
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="●" android:textSize="44sp" android:textColor="#2E63D4" android:gravity="center"/>
+                <TextView android:id="@+id/lblChip2" android:layout_width="match_parent" android:layout_height="match_parent" android:text="1k" android:textSize="12sp" android:textStyle="bold" android:textColor="#FFFFFF" android:gravity="center"/>
+            </FrameLayout>
+
+            <!-- CHIP BLANCO -->
+            <FrameLayout
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="2dp">
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="◯" android:textSize="56sp" android:textColor="#FFFFFF" android:gravity="center" android:shadowColor="#55000000" android:shadowDx="0" android:shadowDy="2" android:shadowRadius="3"/>
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="●" android:textSize="44sp" android:textColor="#DDDDDD" android:gravity="center"/>
+                <TextView android:id="@+id/lblChip3" android:layout_width="match_parent" android:layout_height="match_parent" android:text="1k" android:textSize="12sp" android:textStyle="bold" android:textColor="#111111" android:gravity="center"/>
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ====== MANO DEL JUGADOR ====== -->
+    <LinearLayout
+        android:id="@+id/playerHand"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="6dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/gPlayerTop"
+        app:layout_constraintBottom_toBottomOf="@id/gPlayerBottom"
+        app:layout_constraintStart_toStartOf="@id/tableRim"
+        app:layout_constraintEnd_toEndOf="@id/tableRim" />
+
+    <!-- Contador visible junto a la mano del jugador -->
+    <TextView
+        android:id="@+id/tvPlayerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="17"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:shadowColor="#99000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="4"
+        app:layout_constraintBottom_toBottomOf="@id/playerHand"
+        app:layout_constraintStart_toStartOf="@id/playerHand"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="6dp" />
+
+    <!-- ====== BOTONERA (compacta) ====== -->
+    <LinearLayout
+        android:id="@+id/actionsBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/gButtonsBottom"
+        app:layout_constraintStart_toStartOf="@id/tableRim"
+        app:layout_constraintEnd_toEndOf="@id/tableRim">
+        <TextView android:id="@+id/btnDouble"    android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="x2"   android:textSize="16sp" android:textStyle="bold" android:textColor="#000" android:gravity="center" android:background="#E6CF3A" android:layout_margin="5dp"/>
+        <TextView android:id="@+id/btnDeal"      android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="DEAL" android:textSize="13sp" android:textStyle="bold" android:textColor="#000" android:gravity="center" android:background="#4CAF50" android:layout_margin="5dp"/>
+        <TextView android:id="@+id/btnHit"       android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="HIT"  android:textSize="13sp" android:textStyle="bold" android:textColor="#000" android:gravity="center" android:background="#8BC34A" android:layout_margin="5dp"/>
+        <TextView android:id="@+id/btnStand"     android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="STAND" android:textSize="12sp" android:textStyle="bold" android:textColor="#FFF" android:gravity="center" android:background="#3F51B5" android:layout_margin="5dp"/>
+        <TextView android:id="@+id/btnSplit"     android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="SPLIT" android:textSize="12sp" android:textStyle="bold" android:textColor="#FFF" android:gravity="center" android:background="#009688" android:layout_margin="5dp"/>
+        <TextView android:id="@+id/btnInsurance" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="INS"   android:textSize="12sp" android:textStyle="bold" android:textColor="#FFF" android:gravity="center" android:background="#B63E2E" android:layout_margin="5dp"/>
+        <TextView android:id="@+id/btnClear"     android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="CLR"   android:textSize="13sp" android:textStyle="bold" android:textColor="#FFF" android:gravity="center" android:background="#CF2F2F" android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <!-- Ribete madera -->
+    <View
+        android:id="@+id/woodRail"
+        android:layout_width="0dp"
+        android:layout_height="14dp"
+        android:background="#6D3F29"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBackToCatalog"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_close_black"
+        android:contentDescription="Volver al Catálogo"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:tint="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

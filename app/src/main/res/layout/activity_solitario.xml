@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A7A1F"
+    tools:context=".solitario.Solitario_Activity">
+
+    <!-- Botón para Volver al Catálogo -->
+    <ImageButton
+        android:id="@+id/buttonBackToCatalog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Volver al Catálogo"
+        android:padding="8dp"
+        android:src="@drawable/ic_close_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filasTableau" />
+
+    <LinearLayout
+        android:id="@+id/filaSuperior"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Mazo de Robo -->
+        <FrameLayout
+            android:id="@+id/mazoRoboContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp">
+
+            <ImageView
+                android:id="@+id/imagenMazoRobo"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:scaleType="fitCenter"
+                android:src="@drawable/card_back" /> <!-- Imagen para el reverso de la carta -->
+        </FrameLayout>
+
+        <!-- Descarte -->
+        <FrameLayout
+            android:id="@+id/descarteContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/imagenDescarte"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:scaleType="fitCenter"
+                android:background="@drawable/placeholder_tableau" /> <!-- Placeholder sutil -->
+        </FrameLayout>
+
+
+        <!-- Pilas de Fundación (Ases) -->
+        <ImageView
+            android:id="@+id/fundacion1"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/placeholder_fundacion"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/fundacion2"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/placeholder_fundacion"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/fundacion3"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/placeholder_fundacion"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/fundacion4"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
+            android:layout_weight="1"
+            android:background="@drawable/placeholder_fundacion"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <!-- Pilas del Tablero (Tableau) -->
+    <LinearLayout
+        android:id="@+id/filasTableau"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/filaSuperior"
+        app:layout_constraintBottom_toTopOf="@+id/botonReiniciar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:id="@+id/tableauColumna1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/placeholder_tableau"/>
+
+        <FrameLayout
+            android:id="@+id/tableauColumna2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/placeholder_tableau"/>
+        <FrameLayout
+            android:id="@+id/tableauColumna3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/placeholder_tableau"/>
+
+        <FrameLayout
+            android:id="@+id/tableauColumna4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/placeholder_tableau"/>
+
+        <FrameLayout
+            android:id="@+id/tableauColumna5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/placeholder_tableau"/>
+
+        <FrameLayout
+            android:id="@+id/tableauColumna6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/placeholder_tableau"/>
+
+        <FrameLayout
+            android:id="@+id/tableauColumna7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/placeholder_tableau"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botonReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Reiniciar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
